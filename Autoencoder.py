@@ -19,7 +19,6 @@ class Autoencoder:
 		
 		self.decW=tf.Variable(
 			initial_value=decW_init,
-				dtype=tf.float32,
 				name=prefix+'decW');
 		
 		#encW initialization
@@ -30,7 +29,7 @@ class Autoencoder:
 				math.sqrt(6.0/(input_dim+represent_dim)));
 		
 		self.encW=tf.Variable(
-			initial_value=encW_init,dtype=tf.float32,
+			initial_value=encW_init
 			name=prefix+'encW');
 		
 		#encb initialization
@@ -38,7 +37,6 @@ class Autoencoder:
 			encb_init=tf.zeros([represent_dim]);
 			
 		self.encb=tf.Variable(encb_init,
-						dtype=tf.float32,
 			name=prefix+'encb');
 		
 		#decb initialization
@@ -47,7 +45,6 @@ class Autoencoder:
 			
 		self.decb=tf.Variable(
 			decb_init,
-			dtype=tf.float32,
 			name=prefix+'decb');
 		
 		
